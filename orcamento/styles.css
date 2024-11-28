@@ -1,0 +1,1033 @@
+@media screen and (min-width: 300px){
+
+    *{
+        margin: 0;
+        box-sizing: 0;
+        padding: 0;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    body{
+        background-color: rgb(255, 255, 255);
+    }
+
+    #content{
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 40px;
+        margin-bottom:20px;
+        border: 2px;
+        border-style: solid;
+        border-radius: 10px;
+        border-color: #000;
+        padding: 10px;
+    }
+
+    button {
+        background-color: #13a013;
+        color: #020202;
+        border: 1px solid #080808;
+        padding: 0.3rem 0.3rem;
+        font-size: 1rem;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+    }
+
+    button:hover{
+        transform: scale(1.1);
+    }
+
+    .divisoria{
+        width: 100%;
+        background-color: #000;
+        margin-top: 10px;
+        height: 2px;
+    }
+
+    .btn-voltar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .voltar{
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .voltar p{
+        margin-right: 10px;
+        font-size: 20px;
+    }
+
+    .voltar i{
+        font-size: 20px;
+    }
+
+    /* CABEÇALHO */
+
+    .cabecalho{
+        display: flex;
+        align-items: center;
+    }
+
+    .img-cabecalho img{
+        margin-right: 20px;
+        border: 1px;
+        border-style: solid;
+        border-radius: 10px;
+        border-color: #000;
+        width: 70%;
+    }
+
+    .info_empresa{
+        flex-grow: 1;
+    }
+
+    .info_empresa p{
+        font-size: 8px;
+    }
+    
+    .info_empresa span{
+        font-weight: 600;
+    }
+
+    .titulo{
+        margin-right: 15px;
+    }
+
+    .titulo h1{
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        background-color: #8d8a8a;
+        font-size: 15px;
+        border: 2px;
+        border-style: solid;
+        border-radius: 10px;
+        border-color: #000;
+        padding: 5px;
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    #numOrc{
+        margin: 0;
+    }
+
+    .data{
+        display: flex;
+        justify-content: right;
+    }
+
+    #data{
+        margin-top: 10px;
+        margin-right: 5px;
+        font-size: 12px;
+    }
+
+    .data h5{
+        display: block;
+        justify-content: right;
+        align-items: right;
+        text-align: right;
+        font-size: 12px;
+        margin-top: 10px;
+        margin-right: 5px;
+    }
+
+    .desc-orcamento{
+        display: flex;
+        margin-top: 10px;
+    }
+
+    .desc-orcamento p{
+        font-size: 10px;
+    }
+
+    #descricao{
+        margin-left: 5px;
+        max-width: 250px;
+    }
+    
+    /* FORM CLIENTE */
+
+    .form_cliente{
+        border: 1px;
+        border-style: solid;
+        border-radius: 10px;
+        border-color: #000;
+        padding: 5px;
+        margin-top: 10px;
+    }
+
+    .form_cliente label{
+        font-size: 10px;
+    }
+
+    .form_cliente input{
+        width: 100%;
+        height: 15px;
+        margin-top: 5px;
+        font-size: 10px;
+    }
+
+    #telefone{
+        width: 150px;
+        margin-top: 10px;
+    }
+
+    #telefone::placeholder{
+        font-size: 10px;
+        padding: 2px;
+    }
+
+    form{
+        margin-right: 10px;
+    }
+
+    /* FORM VALIDADE */
+
+    .form_validade{
+        border: 1px;
+        border-style: solid;
+        border-radius: 10px;
+        border-color: #000;
+        padding: 5px;
+        margin-top: 10px;
+    }
+
+    .form_validade label{
+        font-size: 10px;
+    }
+
+    .form_validade input{
+        width: 10%;
+        height: 15px;
+        margin-top: 5px;
+        font-size: 10px;
+        text-align: center;
+    }
+    
+    input[type=number]::-webkit-inner-spin-button{
+        -webkit-appearance: none;
+    }
+
+    .form_validade span{
+        margin-left: 5px;
+        text-align: center;
+        font-size: 10px;
+    }
+
+    /* ITENS */
+
+    .container{
+        width: 100%;
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .titulo-itens{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .titulo-itens h3{
+        height: 30px;
+        background-color: #8d8a8a;
+        border: 2px;
+        border-style: solid;
+        border-radius: 5px;
+        border-color: #000;
+        margin-top: 10px;
+        font-size: 14px;
+        flex-grow: 1;
+        text-align: center;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    .itens{
+        margin-top: 10px;
+        padding: 5px;
+        border: 1px;
+        border-style: solid;
+        border-radius: 5px;
+        border-color: #000;
+    }
+
+    #novo-item{
+        display: flex;
+        
+    }
+
+    .itens input{
+        margin-left: 5px;
+        width: 100%;
+        top: 10px;
+    }
+
+    .btn-item{
+        flex-grow: 1;
+        margin-left: 5px;
+        border-style: none;
+    }
+
+    #add-item{
+        font-size: 15px;
+        flex-grow: 1;
+    }
+
+    /* ITEM CRIADO */
+
+    .create{
+        display: block;
+        justify-content: space-around;
+        align-items: center;
+        border: 1px;
+        border-style: solid;
+        border-radius: 5px;
+        border-color: #000;
+        margin-top: 10px;
+        padding: 5px;
+        position: relative;
+    }
+
+    .create h3{
+        font-size: 0.9rem;
+        margin-left: 5px;
+        display: inline;
+    }
+
+    hr{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .create button {
+        margin-left: 0.4rem;
+        font-size: 15px;
+        display: inline-flex;
+        
+    }
+
+    .remove-item{
+        position: absolute;
+        right: 10px;
+        bottom: 8px;
+        margin-left: 10px;
+        background-color: rgba(255, 0, 0, 0.726);
+    }
+
+    .edit-item{
+        position: absolute;
+        right: 45px;
+        bottom: 8px;
+        background-color: rgb(238, 216, 14);
+    }
+
+    .span{
+        display: inline;
+        margin-left: 5px;
+        font-size: 12px;
+    }
+
+    .input_reais{
+        margin-top: 5px;
+        margin-left: 5px;
+        margin-bottom: 30px;
+        width: 25%;
+    }
+
+    /* TOTAL DE PRODUTOS */
+
+    .total{
+        display: flex;
+        flex-direction: column;
+        justify-content: right;
+        text-align: right;
+        align-items: flex-end;
+    }
+
+    .text-total{
+        margin-top: 20px;
+        margin-bottom: 10px;
+        padding: 5px;
+        width: 60%;
+        border: 2px;
+        border-style: solid;
+        border-radius: 10px;
+        border-color: #000;
+        background-color: #8d8a8a;
+    }
+
+    p{
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    /* DADOS DO PAGAMENTO */
+
+    .pagamento{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        height: 30px;
+        border: 2px;
+        border-style: solid;
+        border-radius: 5px;
+        border-color: #000;
+        margin-top: 10px;
+        background-color: #8d8a8a;
+    }
+
+    .titulo-pagamento h3{
+        width: 100%;
+        font-size: 14px;
+        text-align: center;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    .forma-pagamento form{
+        margin-top: 20px;
+        padding: 5px;
+        border: 1px;
+        border-style: solid;
+        border-radius: 5px;
+        border-color: #000;
+    }
+
+    .forma-pagamento label{
+        display: block;
+        font-size: 12px;
+    }
+    
+    .textarea{
+        max-width: 270px;
+        min-width: 180px;
+        min-height: 20px;
+    }
+
+    /* ASSINATURAS */
+
+    .assinaturas{
+        display: inline;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: relative;
+    }
+
+    .ass-cliente{
+        display: flex;
+        justify-content: left;
+        position: absolute;
+    }
+
+    .ass-cliente p{
+        font-size: 12px;
+        margin-top: 20px;
+    }
+
+    .ass-prestador{
+        display: flex;
+        justify-content: right;
+    }
+
+    .ass-prestador p{
+        font-size: 12px;
+        margin-top: 20px;
+    }
+
+    .img-assinatura{
+        display: flex;
+        justify-content: right;
+        align-items: right;
+    }
+
+    .img-assinatura img{
+        width: 40%;
+        display: flex;
+    }
+
+    .linha{
+        width: 40%;
+        height: 1px;
+        background-color: #00000094;
+        margin-top: -3px;
+    }
+
+    /* BOTÃO GERAR PDF */
+
+    .btn-pdf{
+        display: flex;
+        justify-content: right;
+        margin-top: 80px;
+    }
+}
+
+/* DESKTOP */
+
+@media screen and (min-width: 1024px){
+    body{
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+
+    /* CABEÇALHO */
+
+    .cabecalho{
+        display: flex;
+        align-items: center;
+    }
+
+    .img-cabecalho img{
+        width: 100%;
+    }
+
+    #nome_empresa{
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+
+    .info_empresa p{
+        font-size: 15px;
+        font-weight: 300;
+        margin-left: 20px;
+    }
+    
+    .info_empresa span{
+        font-weight: 600;
+    }
+
+    .titulo h1{
+        font-size: 20px;
+        height: 20px;
+    }
+
+    #numOrc{
+        margin-left: 10px;
+        width: 40px;
+        height: 20px;
+        font-size: 20px;
+        background-color: #ebe1e183;
+    }
+
+    #data{
+        margin-top: 10px;
+        margin-right: 5px;
+        font-size: 18px;
+    }
+
+    .data h5{
+        font-size: 18px;
+    }
+
+    .desc-orcamento{
+        display: flex;
+        margin-top: 10px;
+    }
+
+    .desc-orcamento p{
+        font-size: 15px;
+    }
+
+    #descricao{
+        margin-left: 5px;
+        max-width: 650px;
+        min-width: 650px;
+        min-height: 40px;
+        font-size: 18px;
+        padding: 2px;
+    }
+
+     /* FORM CLIENTE */
+
+     .form_cliente {
+        width: 100%;
+        padding: 0px;
+        margin-right: 40px;
+    }
+
+    .form_cliente form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form_cliente .form-group {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .form_cliente label {
+        width: 100px; /* Ajuste o valor conforme necessário */
+        margin-right: 10px;
+        margin-left: -20px;
+        text-align: right;
+        font-size: 15px;
+    }
+
+    .form_cliente input {
+        flex: 1;
+        width: 100%;
+    }
+
+    .form_cliente input{
+        flex: 1;
+        width: 100%;
+        height: 20px;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        font-size: 15px;
+    }
+
+    #telefone{
+        max-width: 150px;
+        font-size: 15px;
+        padding: 1px 0.5%;
+    }
+
+    #telefone::placeholder{
+        font-size: 15px;
+        padding: 0;
+    }
+
+    /* FORM VALIDADE */
+
+    .form_validade{
+        border: 1px;
+        border-style: solid;
+        border-radius: 10px;
+        border-color: #000;
+        padding: 5px;
+        margin-top: 10px;
+    }
+
+    .form_validade label{
+        font-size: 15px;
+    }
+
+    .form_validade input{
+        width: 5%;
+        height: 20px;
+        margin-top: 5px;
+        font-size: 15px;
+        padding: 2px;
+    }
+
+    .form_validade span{
+        margin-left: 5px;
+        text-align: center;
+        font-size: 15px;
+    }
+
+    /* ITENS */
+
+    .titulo-itens h3{
+        height: 35px;
+        font-size: 18px;
+    }
+
+    #novo-item{
+        display: flex;
+    }
+
+    .itens input{
+        margin-left: 5px;
+        padding: 5px;
+        font-size: 15px;
+    }
+
+    .btn-item{
+        flex-grow: 1;
+        margin-left: 5px;
+        max-width: 40px;
+        max-height: 40px;
+        min-width: 40px;
+        min-height: 40px;
+    }
+
+    #add-item{
+        font-size: 20px;
+        flex-grow: 1;
+    }
+
+    #input_item{
+        max-width: 100%;
+        min-width: 94%;
+        min-height: 40%;
+        padding: 5px;
+        font-size: 16px;
+    }
+
+    #input_item::placeholder{
+        font-size: 15px;
+    }
+
+    .total-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+    }
+    
+    .total-item .item-material{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .total-item .item-servicos{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .total-item .item-total{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-self: flex-start;
+    }
+
+    .total-item input{
+        height: 10px;
+        background-color: yellow;
+    }
+
+
+    #item-material, #item-servicos, #item-total{
+        width: 100px;
+        margin-left: 2px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .total-item p{
+        background-color: yellow;
+    }
+
+    .total-item strong{
+        margin-right: 5px;
+    }
+
+    .text-material{
+        margin-top: 20px;
+        margin-bottom: 0px;
+        padding: 5px;
+        width: 30%;
+        border: 2px;
+        border-style: solid;
+        border-radius: 10px;
+        border-color: #000;
+        background-color: #da7b0e;
+    }
+    
+    #total-material{
+        width: 30%;
+        min-width: 40%;
+        margin-left: 5px;
+        padding: 2px;
+        font-size: 15px;
+    }
+
+    .text-servicos{
+        margin-top: 10px;
+        margin-bottom: 0px;
+        padding: 5px;
+        width: 30%;
+        border: 2px;
+        border-style: solid;
+        border-radius: 10px;
+        border-color: #000;
+        background-color: #a09d08;
+    }
+
+    #total-servicos{
+        width: 30%;
+        min-width: 40%;
+        margin-left: 5px;
+        padding: 2px;
+        font-size: 15px;
+    }
+    
+    .text-total{
+        width: 30%;
+        background-color: #15a008;
+    }
+
+    #total{
+        width: 30%;
+        min-width: 40%;
+        margin-left: 5px;
+        padding: 2px;
+        font-size: 15px;
+    }
+
+    /* ITEM CRIADO */
+
+    .create h3{
+        font-size: 1.2rem;
+    }
+
+    .valor-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .valor-material{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .valor-servicos{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .valor-total{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .valor-item input{
+        height: 20px;
+        background-color: yellow;
+    }
+
+    .material{
+        width: 100px;
+        margin-left: 2px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .servicos{
+        width: 100px;
+        margin-left: 2px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .itemTotal{
+        width: 100px;
+        margin-left: 2px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .valor-item p{
+        background-color: yellow;
+    }
+
+    .create button {
+        font-size: 20px;
+    }
+
+    .remove-item{
+        position: absolute;
+        right: 10px;
+        bottom: 8px;
+        margin-left: 10px;
+        background-color: rgba(255, 0, 0, 0.726);
+    }
+
+    .edit-item{
+        right: 55px;
+    }
+
+    .span{
+        display: inline;
+        margin-left: 5px;
+        font-size: 15px;
+    }
+
+    .input_reais{
+        margin-top: 5px;
+        margin-left: 5px;
+        margin-bottom: 30px;
+        width: 10%;
+        font-size: 15px;
+    }
+
+    /* TOTAL DE PRODUTOS */
+    
+    .text-material{
+        margin-top: 20px;
+        margin-bottom: 0px;
+        padding: 5px;
+        width: 30%;
+        border: 2px;
+        border-style: solid;
+        border-radius: 10px;
+        border-color: #000;
+        background-color: #da7b0e;
+    }
+    
+    #total-material{
+        width: 30%;
+        margin-left: 5px;
+        padding: 2px;
+        font-size: 15px;
+    }
+
+    .text-servicos{
+        margin-top: 10px;
+        margin-bottom: 0px;
+        padding: 5px;
+        width: 30%;
+        border: 2px;
+        border-style: solid;
+        border-radius: 10px;
+        border-color: #000;
+        background-color: #a09d08;
+    }
+
+    #total-servicos{
+        width: 30%;
+        margin-left: 5px;
+        padding: 2px;
+        font-size: 15px;
+    }
+    
+    .text-total{
+        width: 30%;
+        background-color: #15a008;
+    }
+
+    #total{
+        width: 30%;
+        margin-left: 5px;
+        padding: 2px;
+        font-size: 15px;
+    }
+
+    /* DADOS DO PAGAMENTO */
+
+    .titulo-pagamento h3{
+        font-size: 18px;
+    }
+
+    .forma-pagamento form{
+        margin-top: 20px;
+        padding: 5px;
+        border: 1px;
+        border-style: solid;
+        border-radius: 5px;
+        border-color: #000;
+    }
+
+    .forma-pagamento label{
+        display: block;
+        font-size: 15px;
+        margin-bottom: 5px;
+        margin-top: 10px;
+    }
+    
+    .textarea{
+        max-width: 850px;
+        min-width: 180px;
+        min-height: 20px;
+        padding: 2px;
+    }
+
+    /* ASSINATURAS */
+
+    .ass-cliente p{
+        font-size: 15px;
+        margin-top: 20px;
+        margin-left: 10px;
+    }
+
+    .ass-prestador{
+        margin-right: 10px;
+    }
+
+    .ass-prestador p{
+        font-size: 15px;
+        margin-top: 20px;
+    }
+
+    .img-assinatura{
+        display: flex;
+        justify-content: right;
+        align-items: right;
+    }
+
+    .img-assinatura img{
+        width: 20%;
+        display: flex;
+        margin-right: 10px;
+    }
+
+    .linha{
+        width: 20%;
+        height: 1px;
+        background-color: #00000094;
+        margin-top: -5px;
+        margin-left: 10px;
+        margin-bottom: 50px;
+    }
+
+    /* BOTÃO GERAR PDF */
+
+    .btn-pdf{
+        display: flex;
+        justify-content: right;
+        margin-top: 20px;
+        margin-right: 50px;
+        margin-bottom: 40px;
+    }
+
+
+    /* EDITAR ITENS */
+
+    .edit-descricao{
+        max-width: 100%;
+        min-width: 94%;
+        min-height: 40%;
+        padding: 5px;
+        font-size: 16px;
+    }
+
+    .edit-valor-material{
+        margin-left: 10px;
+        padding: 5px;
+        width: 100px;
+    }
+
+    .edit-valor-servicos{
+        margin-left: 10px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        padding: 5px;
+        width: 100px;
+    }
+
+    
+
+}

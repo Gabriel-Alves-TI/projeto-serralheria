@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recibo de Pagamento</title>
+    <!--BOOTSTRAP ICONS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!--FIM BOOTSTRAP ICONS-->
+    <link rel="stylesheet" href="stylesRecibo.css">
+    <script src="scriptRecibo.js" defer></script>
+    <!--GERADOR DE PDF-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <!--FIM GERADOR DE PDF-->
+    <link rel="icon" type="image/png" sizes="32x32" href="../imagens/favicon-recibo-32x32.png">
+</head>
+<body>
+    <div class="voltar">
+        <p>Voltar</p>
+        <button class="btn-voltar">
+            <a href="../index.html"><i class="bi bi-arrow-return-left"></i></a>
+        </button>
+    </div>
+    <div id="content">
+        <section>
+            <header>
+                <div class="cabecalho">
+                    
+                    <div class="img-cabecalho">
+                        <img src="../imagens/Logo LM.png" alt="Logo LM SERRALHERIA">
+                    </div>
+
+                    <div class="info_empresa">
+                        <p id="nome_empresa">LM SERRALHERIA</p>
+                        <p><span>CNPJ:</span> 17.317.683/0001-08</p>
+                        <p><span>E-mail:</span> jaimejrmenezes_@outlook.com</p>
+                        <p><span>Endereço:</span> Rua Itá, 69-Jardim Petroni-SBC/SP</p>
+                        <p><span>Telefone/WhatsApp:</span> (11) 98415-5644</p>
+                    </div>
+                </div>
+            </header>
+        </section>
+
+        <section>
+            <div class="titulo">
+                <h1>RECIBO DE PAGAMENTO Nº<input type="text" id="numOrc"></h1>
+            </div>
+            <div class="data">
+                <h5>Data:</h5>
+                <p id="data">00-00-0000</p>
+            </div>
+            <div class="form_cliente">
+                <form action="">
+                    <div class="form-group">
+                        <label for="cliente" class="formDados"><strong>Cliente:</strong></label>
+                        <input type="text" id="cliente">
+                        <label for="cnpj" class="formDados" id="text-cnpj"><strong>CPF/CNPJ:</strong></label>
+                        <input type="text" id="cnpj" oninput="preencherCNPJ()" maxlength="18">
+                    </div>
+                    <div class="form-group">
+                        <label for=""><strong>CEP</strong></label>
+                        <input type="text" id="cep" oninput="preencherDados()">
+                        <label for="endereco" class="formDados"><strong>Endereço:</strong></label>
+                        <input type="text" id="endereco">
+                        <label for="numero" class="formDados"><strong>Número:</strong></label>
+                        <input type="text" id="numero">
+                    </div>
+                    <div class="form-group">
+                        <label for="cidade" class="formDados"><strong>Cidade:</strong></label>
+                        <input type="text" id="cidade">
+                        <label for="estado" class="formDados"><strong>Estado:</strong></label>
+                        <input type="text" id="estado">
+                    </div>
+                    <div class="form-group">
+                        <label for="telefone"><strong>Telefone:</strong></label>
+                        <input type="tel" placeholder="(11) 98765-4321" id="telefone" onkeyup="handlePhone(event)">
+                    </div>
+                </form>
+            </div><!--form_cliente-->
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="titulo-itens">
+                    <h3>Descrição</h3>
+                </div>
+                <div class="descricao" id="itens">
+                    <form id="desc-recibo">
+                        <p id="p1">Recebemos de <strong id="text-cliente">*cliente*</strong></p>
+                        <textarea name="" id="text-descricao" cols="100" rows="2" placeholder="correspondente aos serviços..."></textarea>
+                        <div class="form-descricao">
+                            <label for="" id="text-valor"><strong>Valor deste recibo: R$</strong></label>
+                            <input type="text" id="valor">
+                            <label for="" id="text-calendar"><strong>Vencimento:</strong> </label>
+                            <input type="date" id="calendar">
+                        </div>
+                    </form>
+        </section>
+
+        <div class="divisoria"></div>
+
+        <section>
+            <div class="pagamento">
+                <div class="titulo-pagamento">
+                    <h3>Dados do Pagamento</h3>
+                </div>
+            </div>
+            <div class="forma-pagamento">
+                <form action="">
+                    <label for="">Materiais</label>
+                    <textarea name="" id="" cols="80" rows="2" class="textarea">À VISTA</textarea>
+                    <label for="">Mão de Obra</label>
+                    <textarea name="" id="" cols="80" rows="2" class="textarea">AO TÉRMINO DO SERVIÇO A VISTA OU EM PARCELAS</textarea>
+                    <label for="">Forma de Pagamento</label>
+                    <textarea name="" id="" cols="80" rows="2" class="textarea" autocorrect="on">PIX; TRANSFERÊNCIA BANCÁRIA; DINHEIRO</textarea>
+                    <label for="">Observações</label>
+                    <textarea name="" id="" cols="80" rows="2" class="textarea"></textarea>
+                </form>
+            </div>
+            <div class="assinatura">
+                <div class="ass-cliente">
+                    <p>Assinatura Cliente</p>
+                </div>
+                <div class="ass-prestador">
+                    <p>Assinatura Prestador</p>
+                </div>
+                <div class="img-assinatura">
+                    <img src="../imagens/assinatura.png" alt="">
+                </div>
+                <div class="linha"></div>
+            </div>
+        </section>
+    </div>
+        <div class="btn-pdf">
+            <button type="submit" id="generate-pdf">Gerar PDF</button>
+        </div>
+
+
+        <script>
+            document.getElementById('generate-pdf').addEventListener('click', () => {
+            const { jsPDF } = window.jspdf;
+
+            // Obter os valores dos inputs para gerar o nome do arquivo
+            const numOrcInput = document.getElementById('numOrc');
+            const clienteInput = document.getElementById('cliente');
+
+            if (!numOrcInput || !clienteInput) {
+                alert('Por favor, preencha os campos Nº Orçamento e Cliente.');
+                return;
+            }
+
+            const numOrc = numOrcInput.value;
+            const cliente = clienteInput.value;
+
+            if (!numOrc || !cliente) {
+                alert('Por favor, preencha os campos Nº Orçamento e Cliente.');
+                return;
+            }
+
+            const fileName = `RECIBO DE PAGAMENTO - ${numOrc} - ${cliente}.pdf`;
+
+            // Selecionar o conteúdo da página que será transformado em PDF
+            const content = document.body;
+
+            // Ocultar elementos indesejados
+            const inputs = content.querySelectorAll('input, textarea, #novo-item, .edit-item, .remove-item, .itens, .btn-pdf, .voltar');
+            inputs.forEach(input => {
+                input.style.display = 'none';
+            });
+
+            // Trocar inputs pelo texto inserido
+            const textInputs = content.querySelectorAll('input[type="text"], input[type="tel"], input[type="number"], textarea');
+            textInputs.forEach(input => {
+                const textNode = document.createTextNode(input.value);
+                input.parentNode.replaceChild(textNode, input);
+            });
+
+            // Criar o PDF
+            html2canvas(content, { scale: 2 }).then(canvas => {
+                const imgData = canvas.toDataURL('image/png');
+                const pdf = new jsPDF('p', 'mm', 'a4');
+
+                // Definir as dimensões da página A4 em mm
+                const pdfWidth = pdf.internal.pageSize.getWidth();
+                const pdfHeight = pdf.internal.pageSize.getHeight();
+
+                // Definir as dimensões da imagem para preencher a página A4
+                const imgWidth = 320;
+                const imgHeight = 297;
+
+                // Centralizar a imagem na folha A4
+                const xOffset = -55;
+                const yOffset = 0;
+
+                pdf.addImage(imgData, 'PNG', xOffset, yOffset, imgWidth, imgHeight);
+                pdf.save(fileName);
+
+                // Restaurar elementos ocultos
+                inputs.forEach(input => {
+                    input.style.display = '';
+                });
+
+                // Recarregar a página para restaurar os inputs
+                location.reload();
+            });
+        });
+        </script>
+</body>
+</html>
