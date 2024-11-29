@@ -1,17 +1,10 @@
 // Seletores de elementos
 
-
 const novoItem = document.querySelector("#novo-item");
 const itemInput = document.querySelector("#input_item");
 const item = document.querySelector("#lista_item");
 const btnFechar = document.querySelector("btn-fechar");
 const addItens = document.getElementById('itens');
-
-
-
-
-
-
 
 
 // Função para incluir a data atual automaticamente
@@ -78,18 +71,6 @@ const inputs = document.querySelectorAll("#valor");
 inputs.forEach(input => {
     input.addEventListener('input', formatarInput);
 });
-
-/*
-const clienteInput = document.getElementById('cliente');
-const textCliente = document.getElementById('text-cliente');
-
-const alterarCliente = (event) =>{
-    textCliente.innerText = event.target.value;
-};
-
-clienteInput.addEventListener('input', alterarCliente);
-
-*/
 
 // Busca o CEP
 
