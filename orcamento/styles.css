@@ -426,51 +426,32 @@
 
     /* ASSINATURAS */
 
-    .assinaturas{
-        display: inline;
-        justify-content: center;
+    .assinatura{
+        display: flex;
+        justify-content: space-between;
         align-items: center;
         text-align: center;
-        position: relative;
+        width: 100%;
     }
 
-    .ass-cliente{
+    .ass-cliente,
+    .ass-prestador {
         display: flex;
-        justify-content: left;
-        position: absolute;
+        flex-direction: column;
+        align-items: center;
     }
 
-    .ass-cliente p{
-        font-size: 12px;
-        margin-top: 20px;
-    }
-
-    .ass-prestador{
-        display: flex;
-        justify-content: right;
-    }
-
+    .ass-cliente,
     .ass-prestador p{
         font-size: 12px;
         margin-top: 20px;
     }
 
-    .img-assinatura{
-        display: flex;
-        justify-content: right;
-        align-items: right;
-    }
-
-    .img-assinatura img{
-        width: 40%;
-        display: flex;
-    }
-
     .linha{
-        width: 40%;
+        width: 100px;
         height: 1px;
         background-color: #00000094;
-        margin-top: -3px;
+        margin-top: 10px;
     }
 
     /* BOTÃO GERAR PDF */
@@ -957,40 +938,19 @@
 
     /* ASSINATURAS */
 
-    .ass-cliente p{
-        font-size: 15px;
-        margin-top: 20px;
-        margin-left: 10px;
-    }
-
-    .ass-prestador{
-        margin-right: 10px;
+    .ass-prestador {
+        margin-right: 5px;
     }
 
     .ass-prestador p{
         font-size: 15px;
-        margin-top: 20px;
-    }
-
-    .img-assinatura{
-        display: flex;
-        justify-content: right;
-        align-items: right;
-    }
-
-    .img-assinatura img{
-        width: 20%;
-        display: flex;
-        margin-right: 10px;
     }
 
     .linha{
-        width: 20%;
+        width: 150px;
         height: 1px;
         background-color: #00000094;
-        margin-top: -5px;
-        margin-left: 10px;
-        margin-bottom: 50px;
+        margin-top: 20px;
     }
 
     /* BOTÃO GERAR PDF */
